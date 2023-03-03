@@ -3,23 +3,29 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def registercustomer(request):
+def getmaster(request):
     return render(request,"customer/master1.html")
     
-def registercustomer(request):
+def getcustomerhomepage(request):
     return render(request,"customer/homepage1.html")
 
-def registercustomer(request):
+def getcustomersign(request):
     return render(request,"customer/signup.html")
 
-def registercustomer(request):
+def getcustomerlogin(request):
     return render(request,"customer/login.html")
 
-def registercustomer(request):
-    return render(request,"customer/account1.html")
+def getcustomerprofile(request):
+    return render(request,"customer/profile.html")
 
-def registercustomer(request):
+def getcustomers(request):
     return render(request,"customer/search.html")
 
-def registercustomer(request):
+def getmaster2(request):
     return render(request,"customer/master2.html")
+
+def getviewproduct(request):
+    return render(request,"customer/viewproduct.html")
+
+def getloginhomepage(request):
+    return render(request,"customer/loginhomepage.html")
