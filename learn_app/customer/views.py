@@ -29,3 +29,6 @@ def getviewproduct(request):
 
 def getloginhomepage(request):
     return render(request,"customer/loginhomepage.html")
+
+def getbag(request):
+    return render(request,"customer/bag.html")

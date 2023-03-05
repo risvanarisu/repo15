@@ -12,4 +12,5 @@ urlpatterns = [
     path('master2/',views.getmaster2,name="master2"),
     path('viewproduct/',views.getviewproduct,name="viewproduct"),
     path('loginhomepage/',views.getloginhomepage,name="loginhomepage"),
+    path('bag/',views.getbag,name="bag"),
 ]

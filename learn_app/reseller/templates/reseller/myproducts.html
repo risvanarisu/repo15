@@ -4,7 +4,101 @@
 
 {% load static %}
 
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">All</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Status</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Active</a>
+                    <a class="dropdown-item" href="#">Draft</a>
+                    <a class="dropdown-item" href="#">Archived</a>
+                
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Filter 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Filter 4</a>
+                </li>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+              </ul>
 
+            </div>
+        <div class="col-11 col-sm-11 col-md-11 col-lg-11">
+<h4>Products</h4> 
+</div>
+<div class="col-12 col-sm-12 col-md-6 col-lg-4">
+<div class="card border-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">LENOVO A85</div>
+    <div class="card-body ">
+      <img src="{% static 'images/lap3.jpg' %}" alt="" height="300px" width="250px">
+      <p class="card-text"> 20 in stock <br>
+        stock : active <br>
+    vendor : lenovo
+    
+    </p>
+    
+      <button type="button" class="btn btn-primary">Edit</button>
+      <button type="button" class="btn btn-danger">Delete</button>
+    
+    </div>
+</div>
+</div>
+<div class="col-12 col-sm-12 col-md-6 col-lg-4">
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">LENOVO A85</div>
+        <div class="card-body ">
+          <img src="{% static 'images/lap2.jpg' %}" alt="" height="300px" width="250px">
+          <p class="card-text"> 50 in stock <br>
+            stock : active <br>
+        vendor : lenovo
+        
+        </p>
+        
+          <button type="button" class="btn btn-primary">Edit</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+        
+        </div>
+    </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">LENOVO A85</div>
+            <div class="card-body ">
+              <img src="{% static 'images/lap1.jpg' %}" alt="" height="300px" width="250px">
+              <p class="card-text"> 50 in stock <br>
+                stock : active <br>
+            vendor : lenovo
+            
+            </p>
+            
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            
+            </div>
+        </div>
+        </div>
+
+
+
+
+            
+
+
+
+        
+    </div>
+</div>
 
 
 

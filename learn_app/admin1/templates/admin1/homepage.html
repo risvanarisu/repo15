@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
-<body>
-    
-</body>
-</html>
+<body style="background-color: #adb5bb;">
+<div class="container" >
+  <div class="row">
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand"><img src="{% static 'images/LOGO1.jpg' %}" alt="" height="60px" width="100px"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"  style="width:300px;">
+          <button style="margin-right:15px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
+            <a href="{% url 'customer:login' %}"><button style="margin-right:10px ;width: 100px;" class="btn btn-warning">log in</button></a>
+            <a href="{% url 'customer:signup' %}"><button style="  width: 100px;" class="btn btn-warning">sign up</button></a>
+        </form>
+      </nav>       
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(8, 56, 40);">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Electronics
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mobile&accessories</a>
+                <a class="dropdown-item" href="#">Laptop</a>
+                <a class="dropdown-item" href="#">Speaker</a>
+                <a class="dropdown-item" href="#">Camera</a>
+                <a class="dropdown-item" href="#">Gaming&Accessories</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Tv&Appliances
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Television</a>
+                <a class="dropdown-item" href="#">Washing machine</a>
+                <a class="dropdown-item" href="#">Rafrigerators</a>
+                <a class="dropdown-item" href="#">Kitchen&Applainces</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Sports
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Football</a>
+                <a class="dropdown-item" href="#">Cricket</a>
+                <a class="dropdown-item" href="#">Tennis</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Fashion
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mens</a>
+                <a class="dropdown-item" href="#">Womens</a>
+                <a class="dropdown-item" href="#">kids</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col- col-sm- col-md-4 col-lg-4"></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <form>
+                <h2>Log in</h2>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">User name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                
+                <button type="submit" class="btn btn-success">log in</button><br><br>
+
+                <a href="">forget password ?</a><br><br>
+                <a href="">create an account</a><br> <br>
+
+              </form>
+        </div>
+
+       <div class="container">
+        <div class="row">
+             
+      
+      <div style="background-color: rgb(179, 174, 174);" class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <h6>REGISTERED OFFICE ADDRESS</h6>
+      <P>5th floor,crafit square,hilite buisiness park,<br>
+      thondayadu,poovangal,kozhikode,kerala,670136
+      </P>
+      </div>
+      <div style="background-color: rgb(179, 174, 174);" class="col-4 col-sm-4 col-md-2 col-lg-2"><H6>POLICY</H6>
+      <p>return policy,  <br> terms of use<br> security <br> privacy</p>
+      </div>
+      <div style="background-color: rgb(179, 174, 174);" class="col-4 col-sm-4 col-md-2 col-lg-2">
+      <h6>ABOUT AS</h6>
+      <p> contact us <br> about as<br> careers<br> cybersquare<br> wholesale </p>
+      </div>
+      <div  style="background-color: rgb(179, 174, 174);" class="col-4 col-sm-4 col-md-2 col-lg-2">
+      <h6>SOCIAL</h6>
+      <p>facebook<br> twitter<br> youtube</p>
+      </div>
+      <div style="background-color: rgb(117, 121, 121);" class="col-2 col-sm-3 col-md-4 col-lg-4"></div>
+      <div style="background-color: rgb(117, 121, 121);" class="col-8 col-sm-6 col-md-4 col-lg-4">
+        <img src="{% static 'images/visa.jpg' %}" alt=""height="75px" width="200px">
+      </div>
+      <div style="background-color: rgb(117, 121, 121);" class="col-2 col-sm-3 col-md-4 col-lg-4"></div>
+      </div>
+      
+      </div>
+      
+      
+      
+      
+      
+      
+                  
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>      
+      
+      
+      </body>
+      </html>
+      
