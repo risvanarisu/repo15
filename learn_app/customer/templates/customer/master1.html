@@ -19,9 +19,9 @@
         <a class="navbar-brand"><img src="{% static 'images/LOGO1.jpg' %}" alt="" height="60px" width="100px"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"  style="width:300px;">
-          <button style="margin-right:15px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
-            <a href="{% url 'customer:login' %}"><button style="margin-right:10px ;width: 100px;" class="btn btn-warning">log in</button></a>
-            <a href="{% url 'customer:signup' %}"><button style="  width: 100px;" class="btn btn-warning">sign up</button></a>
+          <button style="margin-right:15px;" class="btn btn-outline-success my-2 my-sm-0" type="submit"> <a href="{% url 'customer:search' %}">search</a> </button>
+            <button style="margin-right:10px ;width: 100px;" class="btn btn-warning"><a href="{% url 'customer:login' %}">log in </a></button>
+            <button style="  width: 100px;" class="btn btn-warning"><a href="{% url 'customer:signup' %}">Sign up</a></button>
         </form>
       </nav>       
     </div>

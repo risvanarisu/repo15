@@ -26,5 +26,9 @@ def getmyproducts(request):
 def getaccount(request):
     return render(request,"reseller/account.html")
  
+def getvieworders(request):
+    return render(request,"reseller/vieworders.html")
+ 
+
 
  

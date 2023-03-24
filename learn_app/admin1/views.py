@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 # Create your views here.
-def registeradmin1(request):
+
+
+def getadmin1(request):
     return render(request,"admin1/homepage.html")
 
 def getmaster3(request):

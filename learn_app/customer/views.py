@@ -9,7 +9,7 @@ def getmaster(request):
 def getcustomerhomepage(request):
     return render(request,"customer/homepage1.html")
 
-def getcustomersign(request):
+def getcustomersignup(request):
     return render(request,"customer/signup.html")
 
 def getcustomerlogin(request):
@@ -32,3 +32,6 @@ def getloginhomepage(request):
 
 def getbag(request):
     return render(request,"customer/bag.html")
+
+def getbuynow(request):
+    return render(request,"customer/buynow.html")

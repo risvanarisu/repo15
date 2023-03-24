@@ -10,5 +10,6 @@ urlpatterns = [
     path('master/',views.getmaster,name="master"),
     path('edit/',views.getedit,name="edit"),   
     path('myproducts/',views.getmyproducts,name="myproducts"), 
-    path('account/',views.getaccount,name="account"),    
+    path('account/',views.getaccount,name="account"),   
+    path('vieworders/',views.getvieworders,name="vieworders"),    
 ]  

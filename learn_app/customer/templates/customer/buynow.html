@@ -1,0 +1,74 @@
+{% extends 'customer/master2.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+    <h1>Your Bag</h1>
+       
+        <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                  <h4>image</h4>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="card-body">
+              <img src="{% static 'images/lap3.jpg' %}" alt=""  height="200px"width="200px" >
+              <label for="">product</label>
+              <input type="text" name="" id="">
+              <label for="">Quantity</label>
+              <input type="text" name="" id="">
+              <label for="">price</label>
+              <input type="text" name="" id=""><br>
+              <label for="">total-amount</label>
+              <input type="text" name="" id=""><br><br>
+                <label for="">Methode of pay</label>
+                <input type="radio" name="" id="">Cash on delivary
+                <input type="radio" name="" id="">Google pay
+                <input type="radio" name="" id="">
+<br>
+                <label for="">Address:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+<br>
+
+
+              <button type="button" class="btn btn-success">Buy now</button>
+            </div>
+          </div>
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
