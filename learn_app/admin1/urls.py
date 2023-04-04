@@ -8,4 +8,5 @@ urlpatterns = [
     path('addresellers/',views.getaddresellers,name="addresellers"),
     path('managereseller/',views.getmanagereseller,name="managereseller"),
     path('delete/',views.getdelete,name="delete"),
+    path('sum/',views.getsum,name="sum"),
 ]

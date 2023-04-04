@@ -17,5 +17,13 @@ def getmanagereseller(request):
  
 def getdelete(request):
     return render(request,"admin1/delete.html")
+
+def getsum(request):
+    result=""
+    if request.method=="POST":
+        num1=int(request.POST['frstnum'])
+        num2=int(request.POST['scndnum'])
+        result=num1+num2
+    return render(request,"admin1/sum.html",{'res':result})
  
  

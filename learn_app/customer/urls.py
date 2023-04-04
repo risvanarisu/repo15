@@ -6,6 +6,7 @@ urlpatterns = [
     path('master1/',views.getmaster,name="master1"),
     path('homepage1/',views.getcustomerhomepage,name="homepage1"),
     path('signup/',views.getcustomersignup,name="signup"),
+    path('verifyotp/',views.getcustomerverifyotp,name="verifyotp"),
     path('login/',views.getcustomerlogin,name="login"),
     path('profile/',views.getcustomerprofile,name="profile"),
     path('search/',views.getcustomers,name="search"),

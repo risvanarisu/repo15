@@ -13,67 +13,81 @@
         <div class="row">
 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 <h2>sign up</h2>
-<form>
+<form method="post">
+  {% csrf_token %}
                     
 <div class="form-group">
 <label for="exampleFormControlSelect1">User type</label>
-<select class="form-control" id="exampleFormControlSelect1">
- <option>customer</option>
-<option>reseller</option>
+<select class="form-control" id="exampleFormControlSelect1" name="usertype">
+ <option value="customer">customer</option>
+<option value="reseller">reseller</option>
         
   </select>
   </div>
+  <!-- <div class="form-group" >
+    <label for="exampleFormControlSelect1" >Reseller company name</label>
+    <input type="text" class="form-control" placeholder="company name" disabled>
+  </div>
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">Company registration id </label>
+  <input type="text" disabled name="" id=""class="form-control" placeholder="registration id" style="width: 100%;">
+  </div> -->
+
   <div class="row">
     <div class="col">
       <label for="exampleFormControlSelect1">First name</label>
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="First name" name="_firstname">
     </div>
     <div class="col">
       <label for="exampleFormControlSelect1">Last name(optional)</label>
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Last name"name="_lastname">
     </div>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">gender :</label>
-    <input type="radio" name="gen" id=""> male <input type="radio" name="gen" id=""> female
+    <input type="radio" name="_gender" id="" value="male"> male <input type="radio"value="female" name="_gender" id=""> female
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Date of birth </label>
-    <input type="date" name="" id=""class="form-control" style="width: 100%;">
+    <input type="date" name="_dateofbirth" id=""class="form-control" style="width: 100%;">
     </div>
 
 
 <div class="form-group">
 <label for="exampleFormControlTextarea1">Address </label>
-<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="_address"></textarea>
 </div>
 <div class="form-group">
   <label for="exampleFormControlSelect1">Country</label>
-  <select class="form-control" id="exampleFormControlSelect1">
-   <option>india</option>
+  <select name="_country" class="form-control" id="exampleFormControlSelect1">
+   
+  
    <option>select your country</option>
+   <option value="india">india</option>
    </select>
     </div>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Mobile number </label>
-      <input type="text" name="" class="form-control" id="" placeholder="enter mobile number">
+      <input type="text" name="_mobilenumber" class="form-control" id="" placeholder="enter mobile number">
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Email </label>
-        <input type="email" name="" id=""class="form-control" placeholder="enter email id">
+        <input type="email" name="_email" id=""class="form-control" placeholder="enter email id">
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Password  </label>
-          <input type="password" name="" id=""class="form-control" placeholder="password">
+          <input type="password" name="_password" id=""class="form-control" placeholder="password">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1"> Confirm Password  </label>
             <input type="password" name="" id=""class="form-control" placeholder="confirm password">
             </div>
-            <button type="button" class="btn btn-success">Sign Up</button>
-
+            <button class="btn btn-success">Sign Up</button>
+<p>{{message}}</p>
 
 </form>
+
     </div>
 </div>
 </div>
