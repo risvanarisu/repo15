@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from reseller.models import Reseller
 # Create your views here.
 
 
@@ -10,7 +10,8 @@ def getmaster3(request):
     return render(request,"admin1/master3.html")
 
 def getaddresellers(request):
-    return render(request,"admin1/addresellers.html")
+    reseller_data=Reseller.objects.all()
+    return render(request,"admin1/addresellers.html",{'resellers':reseller_data})
 
 def getmanagereseller(request):
     return render(request,"admin1/managereseller.html")

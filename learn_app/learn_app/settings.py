@@ -135,7 +135,7 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER='vkrisvanarisu@gmail.com'
-EMAIL_HOST_PASSWORD='Soulmate123'
+EMAIL_HOST_PASSWORD='gmmgrbigtsnyvmhy'
 
 
 # Default primary key field type

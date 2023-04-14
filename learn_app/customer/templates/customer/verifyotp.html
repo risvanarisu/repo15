@@ -10,14 +10,11 @@
 </head>
 <body>
 <form action="" method="post">
+    {% csrf_token %}
     <h1>otp verification</h1>
 <label for="">please enter your otp :</label>
-<input type="text" name="" id="">
-
-
-
-
-
+<input type="text" name="o_tp" id="">
+<button>verify otp</button>
 </form>
 
 

@@ -7,60 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
 <body style="background-color: rgb(212, 230, 247);">
     <div class="container">
         <div class="row">
 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 <h2>sign up</h2>
-<form method="post">
+<form action="{% url 'customer:signup' %}" method="post">
   {% csrf_token %}
                     
 <div class="form-group">
 <label for="exampleFormControlSelect1">User type</label>
 <select class="form-control" id="exampleFormControlSelect1" name="usertype">
- <option value="customer">customer</option>
-<option value="reseller">reseller</option>
+  <option value="">please select</option>
+  <option value="customer" id="cus">customer</option>
+<option value="reseller" id="rese">reseller</option>
         
   </select>
   </div>
-  <!-- <div class="form-group" >
-    <label for="exampleFormControlSelect1" >Reseller company name</label>
-    <input type="text" class="form-control" placeholder="company name" disabled>
+  <div id="form2" style="display: none;">
+   <div  class="form-group" >
+    <label for="exampleFormControlSelect1">Reseller company name</label>
+    <input type="text" class="form-control" placeholder="company name" id="res1" name="_company_name">
   </div>
 
 <div class="form-group">
   <label for="exampleFormControlTextarea1">Company registration id </label>
-  <input type="text" disabled name="" id=""class="form-control" placeholder="registration id" style="width: 100%;">
-  </div> -->
-
+  <input type="text"  name="reg_id" id=""class="form-control" placeholder="registration id" style="width: 100%;">
+  </div> 
   <div class="row">
     <div class="col">
-      <label for="exampleFormControlSelect1">First name</label>
-      <input type="text" class="form-control" placeholder="First name" name="_firstname">
+      <label for="exampleFormControlSelect1">Bank account number</label>
+      <input type="text" class="form-control" placeholder="account no" name="_account_no">
     </div>
     <div class="col">
-      <label for="exampleFormControlSelect1">Last name(optional)</label>
-      <input type="text" class="form-control" placeholder="Last name"name="_lastname">
+      <label for="exampleFormControlSelect1">Ifsc code</label>
+      <input type="text" class="form-control" placeholder="ifsc"name="_ifsc_code">
+    </div>
+    <div class="col">
+      <label for="exampleFormControlSelect1">Bank name&Branch name</label>
+      <input type="text" class="form-control" placeholder="branch name"name="_branch_name">
     </div>
   </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">gender :</label>
-    <input type="radio" name="_gender" id="" value="male"> male <input type="radio"value="female" name="_gender" id=""> female
+</div>
+  
+
+
+
+
+  <div class="row">
+    <div class="col form1" >
+      <label for="exampleFormControlSelect1">First name</label>
+      <input type="text" class="form-control" placeholder="First name" name="_firstname" id="tb1">
+    </div>
+    <div class="col form1">
+      <label for="exampleFormControlSelect1">Last name(optional)</label>
+      <input type="text" class="form-control" placeholder="Last name"name="_lastname" id="tb2">
+    </div>
   </div>
-  <div class="form-group">
+  <div class="form-group form1">
+    <label for="exampleFormControlSelect1">gender :</label>
+    <input type="radio" name="_gender" id="check1" value="male"> male <input type="radio"value="female" name="_gender" id=""> female
+  </div>
+  <div class="form-group form1">
     <label for="exampleFormControlTextarea1">Date of birth </label>
-    <input type="date" name="_dateofbirth" id=""class="form-control" style="width: 100%;">
+    <input type="date" name="_dateofbirth" id="dtobr1" class="form-control" style="width: 100%;">
     </div>
 
 
 <div class="form-group">
 <label for="exampleFormControlTextarea1">Address </label>
-<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="_address"></textarea>
+<textarea class="form-control" id="Textarea1" rows="3" name="_address"></textarea>
 </div>
 <div class="form-group">
   <label for="exampleFormControlSelect1">Country</label>
-  <select name="_country" class="form-control" id="exampleFormControlSelect1">
+  <select name="_country" class="form-control" id="Select1">
    
   
    <option>select your country</option>
@@ -69,28 +91,99 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Mobile number </label>
-      <input type="text" name="_mobilenumber" class="form-control" id="" placeholder="enter mobile number">
+      <input type="text" name="_mobilenumber" class="form-control" id="tb3" placeholder="enter mobile number">
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Email </label>
-        <input type="email" name="_email" id=""class="form-control" placeholder="enter email id">
+        <input type="email" name="_email" id="tb4"class="form-control" placeholder="enter email id">
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Password  </label>
-          <input type="password" name="_password" id=""class="form-control" placeholder="password">
+          <input type="password" name="_password" id="tb5"class="form-control" placeholder="password">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1"> Confirm Password  </label>
-            <input type="password" name="" id=""class="form-control" placeholder="confirm password">
+            <input type="password" name="" id="tb6"class="form-control" placeholder="confirm password">
             </div>
-            <button class="btn btn-success">Sign Up</button>
-<p>{{message}}</p>
+            <button  onclick="validation()" class="btn btn-success">Sign Up</button>
+
 
 </form>
-
+<p>{{message}}</p>
     </div>
 </div>
 </div>
+<script>
+
+$('#exampleFormControlSelect1').change(function(){
+selection = $(this).val();
+switch(selection)
+{
+    case 'reseller':
+        $('#form2').show();
+        $('.form1').hide();
+        break;
+    case 'customer':
+        $('.form1').show();
+        $('#form2').hide();
+        break;
+}
+});
+
+
+function valiation(){
+var name=document.getElementById('tb1').value;
+var phonenum=document.getElementById('tb3').value;
+var email=document.getElementById('tb4').value;
+var gender=document.getElementById('check1').value;
+var country=document.getElementById('select1').value;
+var address=document.getElementById('textarea1').value;
+var password=document.getElementById('tb5').value;
+var password2=document.getElementById('tb6').value;
+const pwdFilter = /^(?=.{6,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+if(password!=""){
+       if (!pwdFilter.test(password)) {
+            tb5.innerHTML ="please enter a valid password";
+            tb5.style.display = "block";
+            tb5.style.color = "red";
+            tb5.style.borderColor = "red";
+            
+       } 
+       
+       else     
+            {
+              tb5.style.display = "none";
+              tb5.style.borderColor = "black";
+              
+           }
+          }
+          else{
+            tb5.innerHTML ="please enter a  password";
+            tb5.style.display = "block";
+            tb5.style.color = "red";
+            tb5.style.borderColor = "red";
+        
+
+          }
+
+
+
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>      
 
