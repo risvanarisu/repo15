@@ -9,15 +9,28 @@ def getadmin1(request):
 def getmaster3(request):
     return render(request,"admin1/master3.html")
 
-def getaddresellers(request):
-    reseller_data=Reseller.objects.all()
-    return render(request,"admin1/addresellers.html",{'resellers':reseller_data})
+def getmanageresellers(request):
+    reseller_data=Reseller.objects.filter(status='inactive')
+    if request.method=="POST":
+        seller_id=request.POST['reseller_id']
+        reseller=Reseller.objects.get(id=seller_id)
+        if 'approve' in request.POST:
+            reseller.status='active'
+        if 'reject' in request.POST:
+            reseller.status='reject'
+        reseller.save()
+    return render(request,"admin1/manageresellers.html",{'resellers':reseller_data})
 
-def getmanagereseller(request):
-    return render(request,"admin1/managereseller.html")
+def getactiveresellers(request):
+    reseller_data=Reseller.objects.filter(status='active')
+    
+
+
+    return render(request,"admin1/activeresellers.html",{'resellers':reseller_data})
  
-def getdelete(request):
-    return render(request,"admin1/delete.html")
+def getrejectedresellers(request):
+    reseller_data=Reseller.objects.filter(status='reject')
+    return render(request,"admin1/rejectedresellers.html",{'resellers':reseller_data})
 
 def getsum(request):
     result=""

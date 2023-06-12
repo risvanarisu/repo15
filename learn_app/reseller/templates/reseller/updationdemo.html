@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Title</label>
+            <input type="text" class="form-control" value="{{product_data.title}}" placeholder="Title of the product" name="_title">
+          </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Registered product id</label>
+            <input type="text" class="form-control" value="{{product_data.pro_id}}" placeholder="product id" name="_Registered_product_id">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Discription </label>
+            <textarea class="form-control" value="{{product_data.discription}}" id="exampleFormControlTextarea1" rows="3" name="_discription"></textarea>
+            </div> 
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Price </label>
+        <input type="text" name="_price" value="{{product_data.price}}" class="form-control" id="" placeholder="0.0">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Quantity </label>
+          <input type="text" name="_quantity" value="{{product_data.quantity}}" id=""class="form-control" placeholder="Available quantity">
+          </div> 
+          
+          
+      
+        
+      
+      
+      
+<button >update</button>
+
+
+    </form>
+
+
+ 
+
+</body>
+</html>

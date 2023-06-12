@@ -34,9 +34,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Manage resellers </a>
-                    <a class="nav-link" href="#">Add resellers</a>
-                    <a class="nav-link" href="#">Delete resellers</a>
+                    <a class="nav-link active" href="{% url 'admin1:manageresellers' %}">Manage resellers </a>
+                    <a class="nav-link" href="{% url 'admin1:activeresellers' %}">Active resellers</a>
+                    <a class="nav-link" href="{% url 'admin1:rejectedresellers' %}">Rejected resellers</a>
                 
                   </div>
                 </div>

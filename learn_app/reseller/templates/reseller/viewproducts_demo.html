@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table border="1">
+<tr>
+    <th>title</th>
+    <th>id</th>
+    <th>description</th>
+    <th>price</th>
+    <th>quantity</th>
+    <th>catagory</th>
+    <th>delete</th>
+    <th>update</th>
+</tr>
+{% for product in product_data %}
+<tr>
+    <!-- <form action="" method="post">
+     {% csrf_token %}
+     -->
+
+<td>{{product.title}}</td>
+<td>{{product.pro_id}}</td>
+<td>{{product.discription}}</td>
+<td>{{product.price}}</td>
+<td>{{product.quantity}}</td>
+<td>{{product.catagory}}</td>
+<td><a href="{% url 'reseller:delete_product' product.id %}">delete</a></td>
+
+<td> <a href="{% url 'reseller:_updationdemo' product.id%}"> update</a></td>
+</tr>
+<!-- </form> -->
+{% endfor %}
+   </table> 
+
+</body>
+</html>

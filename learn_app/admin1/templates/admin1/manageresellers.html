@@ -23,18 +23,19 @@
                 </thead>
                 <tbody>
                   {% for reseller in resellers %}
+                  <form action="" method="post">
+                    {% csrf_token %}
                   <tr>
-                    <td>{{reseller.request_date|date:'Y-m-d'}}</td>
+                  <td>{{reseller.request_date|date:'Y-m-d'}}</td>
                   <td>{{reseller.company_name}}<br>{{reseller.reg_id}}</td>
-                  
                   <td>{{reseller.email}}</td>
                   <td>{{reseller.address}}</td>
                   <td>{{reseller.mobile}}</td>
                   <td>{{reseller.branch_bank}} <br> {{reseller.account_number}} <br>{{reseller.ifsc_code}} </td>
-                   nj<td><button class="btn btn-success">active</button></td>
-                  <td><button class="btn btn-danger">reject</button></td>
-                
-                </tr>
+                  <td><button name="approve" class="btn btn-success">active</button></td>
+                  <td><button name="reject" class="btn btn-danger">reject</button></td>
+                <td><input type="hidden" name="reseller_id" value="{{reseller.id}}"></td>
+                </tr></form>
                   {% endfor %}
                 </tbody>
               </table>

@@ -7,17 +7,18 @@
     <div class="row">
 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 <h2>Edit product</h2>
-<form>
-                
+<form action="" method="post">
+   {% csrf_token %}             
 
+  
 
 <div class="form-group">
   <label for="exampleFormControlSelect1">Title</label>
-  <input type="text" class="form-control" placeholder="Title of the product">
+  <input type="text" name="ti_tle" value="{{prod.title}}" class="form-control">
 </div>
 <div class="form-group">
   <label for="exampleFormControlSelect1">Registered product id</label>
-  <input type="text" class="form-control" placeholder="product id">
+  <input type="text" name="pr_id"value="{{prod.pro_id}}" class="form-control" >
 </div>
 
 
@@ -25,28 +26,28 @@
 
 <div class="form-group">
 <label for="exampleFormControlTextarea1">Description </label>
-<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+<textarea class="form-control"name="pr_ad"value="{{prod.discription}}" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 <div class="form-group">
 <label for="exampleFormControlSelect1">Upload product pictures</label>
-<input type="file" name="" id=""class="form-control" placeholder="">
+<input type="file" name="pr_im" id=""class="form-control"value="{{prod.pro_picture}}">
 </div>
 <div class="form-group">
   <label for="exampleFormControlTextarea1">Price </label>
-  <input type="text" name="" class="form-control" id="" placeholder="0.0">
+  <input type="text" name="pr_price" class="form-control" id="" value="{{prod.price}}">
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Quantity </label>
-    <input type="text" name="" id=""class="form-control" placeholder="Available quantity">
+    <input type="text" name="pr_quant" id=""class="form-control" value="{{prod.quantity}}">
     </div>
     <div class="row">
         <div class="col">
           <label for="exampleFormControlSelect1">Weight</label>
-          <input type="text" class="form-control" placeholder="0.0">
+          <input type="text" name="pr_weight" class="form-control"value="{{prod.weight}}">
         </div>
         <div class="col">
           <label for="exampleFormControlSelect1">Weight unit</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" name="pr_unit"value="{{prod.weight_unit}}" id="exampleFormControlSelect1">
             <option>kilogram</option>
            <option>gram</option>
            <option>tonne</option>
@@ -57,7 +58,7 @@
         <div class="row">
         <div class="col">
           <label for="exampleFormControlSelect1">Catagory</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control"value="{{prod.catagory}}" name="pr_cat" id="exampleFormControlSelect1">
             <option>sports</option>
            <option>electronis</option>
            <option>garments</option>
@@ -66,7 +67,7 @@
       </div>
       <div class="col">
         <label for="exampleFormControlSelect1">Subcatagory</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" name="pr_subcat"value="{{prod.sub_catagory}}" id="exampleFormControlSelect1">
           <option>ladies</option>
          <option>mens</option>
          <option>children</option>
@@ -77,24 +78,27 @@
     <div class="row">
         <div class="col">
           <label for="exampleFormControlSelect1">Brand</label>
-          <input type="text" class="form-control" placeholder="eg:nike">
+          <input type="text" name="pr_brand" class="form-control" value="{{prod.brand}}">
         </div>
-        <div class="col">
+        <!-- <div class="col">
           <label for="exampleFormControlSelect1">Status</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" name="pr_status" id="exampleFormControlSelect1">
             <option></option>
            <option></option>
            <option></option>
                    
              </select>
-        </div>
+        </div> -->
         </div>
         <br>
         <div class="form-group">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Save</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block"> <a href=""> Save </a></button>
         </div>
+        <input type="hidden" name="product_id" value="{{add_product.id}}">
 </form>
 </div>
+
+
 </div>
 </div>
 

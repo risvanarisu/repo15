@@ -28,26 +28,31 @@
   </div>
   <div id="form2" style="display: none;">
    <div  class="form-group" >
-    <label for="exampleFormControlSelect1">Reseller company name</label>
-    <input type="text" class="form-control" placeholder="company name" id="res1" name="_company_name">
+    <label for="exampleFormControlSelect1" id="label1">Reseller company name</label>
+    <input type="text" id="res1" class="form-control" placeholder="company name"  name="_company_name">
+  <label for=""id="error11"></label>
   </div>
 
 <div class="form-group">
-  <label for="exampleFormControlTextarea1">Company registration id </label>
-  <input type="text"  name="reg_id" id=""class="form-control" placeholder="registration id" style="width: 100%;">
-  </div> 
+  <label for="exampleFormControlTextarea1" id="label2">Company registration id </label>
+  <input type="text"  name="reg_id" id="text1" class="form-control" placeholder="registration id" style="width: 100%;">
+  <label for=""id="error2"></label>
+</div> 
   <div class="row">
     <div class="col">
-      <label for="exampleFormControlSelect1">Bank account number</label>
-      <input type="text" class="form-control" placeholder="account no" name="_account_no">
+      <label for="exampleFormControlSelect1" id="label3">Bank account number</label>
+      <input type="text" id="text2"class="form-control"id="" placeholder="account no" name="_account_no">
+      <label for=""id="error3"></label>
     </div>
     <div class="col">
-      <label for="exampleFormControlSelect1">Ifsc code</label>
-      <input type="text" class="form-control" placeholder="ifsc"name="_ifsc_code">
+      <label for="exampleFormControlSelect1" id="label4">Ifsc code</label>
+      <input type="text"id="text3" class="form-control"  id=""placeholder="ifsc"name="_ifsc_code">
+      <label for=""id="error4"></label>
     </div>
     <div class="col">
-      <label for="exampleFormControlSelect1">Bank name&Branch name</label>
-      <input type="text" class="form-control" placeholder="branch name"name="_branch_name">
+      <label for="exampleFormControlSelect1" id="label5">Bank name & branch name</label>
+      <input type="text" class="form-control"id="text4" placeholder="branch name"name="_branch_name">
+      <label for=""id="error5"></label>
     </div>
   </div>
 </div>
@@ -58,58 +63,67 @@
 
   <div class="row">
     <div class="col form1" >
-      <label for="exampleFormControlSelect1">First name</label>
-      <input type="text" class="form-control" placeholder="First name" name="_firstname" id="tb1">
+      <label for="exampleFormControlSelect1" id="label6">First name</label>
+      <input type="text" class="form-control" placeholder="First name" name="_firstname" id="text5">
+    <label for="" id="error6"></label>
     </div>
     <div class="col form1">
-      <label for="exampleFormControlSelect1">Last name(optional)</label>
-      <input type="text" class="form-control" placeholder="Last name"name="_lastname" id="tb2">
-    </div>
+      <label for="exampleFormControlSelect1"id="label7">Last name(optional)</label>
+      <input type="text" class="form-control" placeholder="Last name"name="_lastname" id="text6">
+    <label for=""id="error7"></label>
+  </div>
   </div>
   <div class="form-group form1">
-    <label for="exampleFormControlSelect1">gender :</label>
-    <input type="radio" name="_gender" id="check1" value="male"> male <input type="radio"value="female" name="_gender" id=""> female
-  </div>
+    <label for="exampleFormControlSelect1" id="label8">gender :</label>
+    <input type="radio" name="_gender" id="radio1" value="male"> male <input type="radio"value="female" name="_gender" id=""> female
+  <label for=""id="error8"></label>
+</div>
   <div class="form-group form1">
-    <label for="exampleFormControlTextarea1">Date of birth </label>
-    <input type="date" name="_dateofbirth" id="dtobr1" class="form-control" style="width: 100%;">
-    </div>
+    <label for="exampleFormControlTextarea1"id="label9">Date of birth </label>
+    <input type="date" name="_dateofbirth" id="date1" class="form-control" style="width: 100%;">
+    <label for=""id="error9"></label>
+  </div>
 
 
 <div class="form-group">
-<label for="exampleFormControlTextarea1">Address </label>
+<label for="exampleFormControlTextarea1" id="label10" >Address </label>
 <textarea class="form-control" id="Textarea1" rows="3" name="_address"></textarea>
+<label for=""id="error10"></label>
 </div>
 <div class="form-group">
-  <label for="exampleFormControlSelect1">Country</label>
+  <label for="exampleFormControlSelect1"id="label11" >Country</label>
   <select name="_country" class="form-control" id="Select1">
    
   
    <option>select your country</option>
    <option value="india">india</option>
    </select>
+   <label for=""id="error11"></label>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlTextarea1">Mobile number </label>
-      <input type="text" name="_mobilenumber" class="form-control" id="tb3" placeholder="enter mobile number">
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Email </label>
-        <input type="email" name="_email" id="tb4"class="form-control" placeholder="enter email id">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Password  </label>
-          <input type="password" name="_password" id="tb5"class="form-control" placeholder="password">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1"> Confirm Password  </label>
-            <input type="password" name="" id="tb6"class="form-control" placeholder="confirm password">
-            </div>
-            <button  onclick="validation()" class="btn btn-success">Sign Up</button>
+      <label for="exampleFormControlTextarea1" id="label12">Mobile number </label>
+      <input type="text" name="_mobilenumber" class="form-control" id="text7" placeholder="enter mobile number">
+      <label for=""id="error12"></label>
+    </div>
+<div class="form-group">
+  <label for="exampleFormControlTextarea1" id="label13">Email </label>
+  <input type="email" name="_email" id="email1"class="form-control" placeholder="enter email id">
+  <label for=""id="error13"></label>
+</div>
+<div class="form-group">
+  <label for="exampleFormControlTextarea1" id="label14">Password  </label>
+  <input type="password" name="_password" id="password1"class="form-control" placeholder="password">
+ <label for=""id="error14"></label>
+ </div>
+<div class="form-group">
+  <label for="exampleFormControlTextarea1" id="label15"> Confirm Password  </label>
+  <input type="password" name="" id="password2"class="form-control" placeholder="confirm password">
+  <label for="" id="error15"></label>
+</div>
+  <button   class="btn btn-success">Sign Up</button>
 
 
 </form>
-<p>{{message}}</p>
     </div>
 </div>
 </div>
@@ -131,46 +145,253 @@ switch(selection)
 });
 
 
-function valiation(){
-var name=document.getElementById('tb1').value;
-var phonenum=document.getElementById('tb3').value;
-var email=document.getElementById('tb4').value;
-var gender=document.getElementById('check1').value;
-var country=document.getElementById('select1').value;
+function validation(){
+var company_name=document.getElementById('text1').value;
+console.log(company_name);
+var reg_id=document.getElementById('text2').value;
+console.log(reg_id);          
+var account_number=document.getElementById('text3').value;
+console.log(account_number);          
+var ifsc_code=document.getElementById('text4').value;
+console.log(ifsc_code);
+var bank_name=document.getElementById('text5').value;
+console.log(bank_name);
+
+var name=document.getElementById('text6').value;
+var dateofbirth=document.getElementById('date1').value;
 var address=document.getElementById('textarea1').value;
-var password=document.getElementById('tb5').value;
-var password2=document.getElementById('tb6').value;
+var gender=document.getElementById('radio1').value;
+var country=document.getElementById('select1').value;
+var phonenum=document.getElementById('text7').value;
+var email=document.getElementById('email1').value;
+var password=document.getElementById('password1').value;
+var password2=document.getElementById('password2').value;
 const pwdFilter = /^(?=.{6,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-if(password!=""){
-       if (!pwdFilter.test(password)) {
-            tb5.innerHTML ="please enter a valid password";
-            tb5.style.display = "block";
-            tb5.style.color = "red";
-            tb5.style.borderColor = "red";
-            
+if(company_name==""){ 
+          error1.innerHTML = "please enter company_name" ;
+            error1.style.display = "block";
+            error1.style.color = "red";
+            text1.style.borderColor = "red";
+            flag=0;
+         }
+          else if(company_name!=company_name.toUpperCase()){
+         error1.innerHTML = "please enter company_name in uppercase" ;
+            error1.style.display = "block";
+            error1.style.color = "red";
+            text1.style.borderColor = "red";
+            flag=0;
+         }
+         
+         else{
+             error1.style.display = "none";
+             text1.style.borderColor = "black";
+        flag=1;
+          } 
+          if(reg_id==""){ 
+          error2.innerHTML = "please enter registration id" ;
+            error2.style.display = "block";
+            error2.style.color = "red";
+            text2.style.borderColor = "red";
+            flag=0;
+         }  
+         else{
+             error2.style.display = "none";
+             text2.style.borderColor = "black";
+        flag=1;
+          }   
+          if(account_number==""){ 
+          error3.innerHTML = "please enter Account number" ;
+            error3.style.display = "block";
+            error3.style.color = "red";
+            text3.style.borderColor = "red";
+            flag=0;
+         }  
+         else{
+             error3.style.display = "none";
+             text3.style.borderColor = "black";
+        flag=1;
+          }   
+          if(ifsc_code==""){ 
+          error4.innerHTML = "please enter ifsc code" ;
+            error4.style.display = "block";
+            error4.style.color = "red";
+            text4.style.borderColor = "red";
+            flag=0;
+         }  
+         else{
+             error4.style.display = "none";
+             text4.style.borderColor = "black";
+        flag=1;
+          }   
+          if(bank_name==""){ 
+          error5.innerHTML = "please enter bank name" ;
+            error5.style.display = "block";
+            error5.style.color = "red";
+            text5.style.borderColor = "red";
+            flag=0;
+         }  
+         else{
+             error5.style.display = "none";
+             text5.style.borderColor = "black";
+        flag=1;
+          }   
+          if(name==""){ 
+          error6.innerHTML = "please enter name" ;
+            error6.style.display = "block";
+            error6.style.color = "red";
+            text6.style.borderColor = "red";
+            flag=0;
+         } 
+         else if(name!=name.toUpperCase()){
+         error6.innerHTML = "please enter name in uppercase" ;
+            error6.style.display = "block";
+            error6.style.color = "red";
+            text6.style.borderColor = "red";
+            flag=0;
+         } 
+         else{
+             error6.style.display = "none";
+             text6.style.borderColor = "black";
+        flag=1;
+          }   
+           if(dateofbirth==""){
+         error9.innerHTML = "please enter date of birth" ;
+            error9.style.display = "block";
+            error9.style.color = "red";
+            date1.style.borderColor = "red";
+            flag=0;
+         }
+         else{
+             error9.style.display = "none";
+             date1.style.borderColor = "black";
+        flag=1;
+          }   
+          if(country==""){
+         error11.innerHTML = "please enter country" ;
+            error11.style.display = "block";
+            error11.style.color = "red";
+            select1.style.borderColor = "red";
+            flag=0;
+         }
+         
+         else{
+             error11.style.display = "none";
+             select1.style.borderColor = "black";
+        flag=1;
+          }   
+          if(phonenum==""){
+         error12.innerHTML = "please enter mobile number" ;
+            error12.style.display = "block";
+            error12.style.color = "red";
+            text7.style.borderColor = "red";
+            flag=0;
+         }
+         
+         else{
+             error12.style.display = "none";
+             text7.style.borderColor = "black";
+        flag=1;
+          }
+          
+          if(phonenum.length!=10){
+            error12.innerHTML = "pls enter 10 digit number";
+            error12.style.display = "block";
+            error12.style.color = "red";
+            text7.style.borderColor = "red";
+            flag=0;
+          
+           }
+           else{
+              error12.style.display = "none";
+             text7.style.borderColor = "black";
+             flag=1;
+           }
+          if(email==""){
+         error13.innerHTML = "please enter email id" ;
+            error13.style.display = "block";
+            error13.style.color = "red";
+            email1.style.borderColor = "red";
+            flag=0;
+         }
+         
+         else{
+            error13.style.display = "none";
+             email1.style.borderColor = "black";
+        flag=1;
+          } 
+          if (!mailformat.test(email)) {
+            error13.innerHTML ="email is invalid";
+            error13.style.display = "block";
+            error13.style.color = "red";
+            email1.style.borderColor = "red";
+            flag=0;
        } 
        
        else     
             {
-              tb5.style.display = "none";
-              tb5.style.borderColor = "black";
-              
+              error13.style.display = "none";
+              email1.style.borderColor = "black";
+              flag=1;
+           }  
+          if(password!=""){
+       if (!pwdFilter.test(password)) {
+            error14.innerHTML ="please enter a valid password";
+            error14.style.display = "block";
+            error14.style.color = "red";
+            password1.style.borderColor = "red";
+            flag=0;
+       } 
+       
+       else     
+            {
+              error14.style.display = "none";
+              password1.style.borderColor = "black";
+              flag=1;
            }
           }
-          else{
-            tb5.innerHTML ="please enter a  password";
-            tb5.style.display = "block";
-            tb5.style.color = "red";
-            tb5.style.borderColor = "red";
+          else
+          {
+            error14.innerHTML ="please enter a  password";
+            error14.style.display = "block";
+            error14.style.color = "red";
+            password1.style.borderColor = "red";
+            flag=0;
+
+          }  
+          if(password2==""){
+          error15.innerHTML ="pls confirm your password";
+            error15.style.display = "block";
+            error15.style.color = "red";
+            password2.style.borderColor = "red";
+            flag=0;
+           }
+           else if(password2!=password){
+            error15.innerHTML = "password is incorrect";
+            error15.style.display = "block";
+            error15.style.color = "red";
+            password2.style.borderColor = "red";
+            flag=0;
+           }
+           else{
+              error15.style.display = "none";
+             password2.style.borderColor = "black";
+             flag=1;
         
+           }
 
+
+
+
+
+
+          if(flag==1){
+            return true;
           }
-
-
-
-
+          else{
+            return false;
+          }
 }
 </script>
 

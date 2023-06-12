@@ -4,9 +4,18 @@
 
 {% load static %}
 
+<style>
+  h2,h5{
+    color: rgb(54, 116, 95);
+  }
+  .card-text{
+    color: brown;
+  }
+</style>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                   <a class="nav-link" href="#">All</a>
@@ -32,62 +41,33 @@
                   </form>
               </ul>
 
-            </div>
-        <div class="col-11 col-sm-11 col-md-11 col-lg-11">
-<h4>Products</h4> 
-</div>
-<div class="col-12 col-sm-12 col-md-6 col-lg-4">
-<div class="card border-info mb-3" style="max-width: 18rem;">
-    <div class="card-header">LENOVO A85</div>
-    <div class="card-body ">
-      <img src="{% static 'images/lap3.jpg' %}" alt="" height="300px" width="250px">
-      <p class="card-text"> 20 in stock <br>
-        stock : active <br>
-    vendor : lenovo
-    
-    </p>
-    
-      <button type="button" class="btn btn-warning"><a href="{% url 'reseller:edit' %}">Edit</button></a> 
-      <button type="button" class="btn btn-danger">Delete</button>
-    
-    </div>
-</div>
-</div>
-<div class="col-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card border-info mb-3" style="max-width: 18rem;">
-        <div class="card-header">LENOVO A85</div>
-        <div class="card-body ">
-          <img src="{% static 'images/lap2.jpg' %}" alt="" height="300px" width="250px">
-          <p class="card-text"> 50 in stock <br>
-            stock : active <br>
-        vendor : lenovo
-        
-        </p>
-        
-          <button type="button" class="btn btn-warning"><a href="{% url 'reseller:edit' %}">Edit</button></a>
-          <button type="button" class="btn btn-danger">Delete</button>
-        
-        </div>
-    </div>
-    </div>
+            </div> 
 
-    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div class="card border-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">LENOVO A85</div>
-            <div class="card-body ">
-              <img src="{% static 'images/lap1.jpg' %}" alt="" height="300px" width="250px">
-              <p class="card-text"> 50 in stock <br>
-                stock : active <br>
-            vendor : lenovo
-            
-            </p>
-            
-              <button type="button" class="btn btn-warning"><a href="{% url 'reseller:edit' %}">Edit</button></a>
-              <button type="button" class="btn btn-danger">Delete</button>
-            
-            </div>
-        </div>
-        </div>
+<div class="col-12 col-md-12">
+<h2>My products</h2>
+</div>
+
+{% for product in product_data %}
+
+<div class="col-md-4">
+
+
+<div class="card" style="width: 18rem;">
+  <img src="/media/{{product.pro_picture}}" class="card-img-top" alt="" height="300px" width="300px">
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">{{product.quantity}}
+      {{product.brand}}
+      {{product.price}}</p>
+    <a href="{% url 'reseller:edit' %} " class="btn btn-warning">Edit</a>  <a href="{% url 'reseller:getmyproducts' add_product.id %} " class="btn btn-danger">Delete</a>
+    <input type="hidden" name="pr_id" value="{{product.id}}">
+  </div>
+</div>
+
+</div>
+{% endfor %}  
+    
+
 
 
 

@@ -11,5 +11,11 @@ urlpatterns = [
     path('edit/',views.getedit,name="edit"),   
     path('myproducts/',views.getmyproducts,name="myproducts"), 
     path('account/',views.getaccount,name="account"),   
-    path('vieworders/',views.getvieworders,name="vieworders"),    
-]  
+    path('vieworders/',views.getvieworders,name="vieworders"),
+    # path('updateproduct/<int:s_id>',views.update_products,name="updateproducts"),   
+    # path('deleteproduct/<int:s_id>',views.delete_products,name="deleteproducts"),  
+    path('viewproducts_demo',views.getviewproducts_demo,name="viewproducts_demo"),
+    path('deleteproducts/<int:p_id>',views.deleteproducts,name="delete_product"),    
+    path('updation_demo/<int:p_id>',views.getupdationdemo,name="_updationdemo"),
+
+   ]
